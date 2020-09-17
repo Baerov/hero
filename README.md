@@ -1,0 +1,1 @@
+Use composer install command, or php composer.phar(depending on how Composer is installed)

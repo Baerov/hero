@@ -138,6 +138,8 @@ class Combatant{
 
         $damage = $this->getStrength();
         $enemy->defend($damage);
+        
+        return true;
     }
 
     //Function for the defending
@@ -159,6 +161,7 @@ class Combatant{
         if($damage > 0){
             $this->setHealth($this->getHealth() - $damage); //if the damage is bigger than 0, then subscract the damage value from the combatant's health
         }
+        return true;
     }
 
     //Functions for addings new skills for the combatant
