@@ -7,4 +7,3 @@ interface AttackSkill
     public function performAttack();
 }
 
-?>

@@ -2,16 +2,17 @@
 
 namespace Hero\Output;
 
-class CombatOutput implements Output{
-    private $string;
+class CombatOutput implements Output
+{
+    private string $string = "";
 
-    public function displayCondensed($string){
-        echo "<br/>".$this->string."<br/>";
+    public function displayCondensed($string = "")
+    {
+        echo "<br/>" . sprintf("%s", $this->string) . "<br/>";
     }
 
-    public function displaySpacious($string){
-        echo "<br/><br/>".$this->string."<br/><br/>";
+    public function displaySpacious($string = "")
+    {
+        echo "<br/>" . "<br/>" . sprintf("%s", $this->string) . "<br/>" . "<br/>";
     }
 }
-
-?>

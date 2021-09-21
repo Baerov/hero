@@ -32,7 +32,7 @@ final class MainTest extends TestCase
     public function testCombat(){
         $attackerPower = $this->c1->getStrength();
 
-        $defenderPower = $this->c2->getDefense();
+        $defenderPower = $this->c2->getDefence();
 
         $this->assertGreaterThan($defenderPower, $attackerPower);
 

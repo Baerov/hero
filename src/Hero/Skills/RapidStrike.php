@@ -4,24 +4,26 @@ namespace Hero\Skill;
 
 use Hero\Combatant;
 
-class RapidStrike implements AttackSkill{
-    public $name = "Rapid Strike";
-    private $attacker;
-    private $chance;
+class RapidStrike implements AttackSkill
+{
+    public string $name = "Rapid Strike";
+    private Combatant $combatant;
+    private int $chance;
 
-    public function __construct(Combatant $attacker, int $chance){
-        $this->attacker = $attacker;
+    public function __construct(Combatant $combatant, int $chance)
+    {
+        $this->combatant = $combatant;
         $this->chance = $chance;
     }
 
-    public function performAttack(){
-        if($this->chance == rand(1, 100)){
-            $damage = $this->attacker->getStrength() * 2;
-            print_r($this->attacker->getName()." has used ".$this->name.".<br />");
-        }
+    public function performAttack()
+    {
+        $damage = $this->combatant->getStrength();
 
-        $damage = $this->attacker->getStrength();
+        if ($this->chance == rand(1, 100)) {
+            $damage = $this->combatant->getStrength() * 2;
+            print(sprintf("%s has used %s.<br/>", $this->combatant->getName(), $this->name));
+        }
         return $damage;
     }
 }
-?>

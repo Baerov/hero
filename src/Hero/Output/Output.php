@@ -8,4 +8,3 @@ interface Output{
     public function displaySpacious(string $string);
 }
 
-?>

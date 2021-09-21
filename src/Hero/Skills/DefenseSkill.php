@@ -7,4 +7,3 @@ interface DefenseSkill
     public function performDefense();
 }
 
-?>
